@@ -41,7 +41,7 @@ function Home() {
         <div className="bg-white rounded-xl border border-gray-200 p-6 text-center hover:border-gray-400 transition-colors cursor-pointer">
           <p className="text-3xl mb-2">🌏</p>
           <Link to="/Asia">
-          <button className="bg-red-700 text-white px-8 py-5 rounded-lg text-sm font-medium hover:bg-red-200 transition-colors">
+          <button className="bg-red-700 text-white px-8 py-4 rounded-lg text-sm font-medium hover:bg-red-200 transition-colors">
             Click to explore Asia
           </button>
           </Link>
@@ -59,7 +59,7 @@ function Home() {
         <div className="bg-white rounded-xl border border-gray-200 p-6 text-center hover:border-gray-400 transition-colors cursor-pointer">
             <p className="text-3xl mb-2">🌏</p>
             <Link to="/SouthAmerica">
-            <button className="bg-pink-700 text-white px-8 py-5 rounded-lg text-sm font-medium hover:bg-pink-200 transition-colors">
+            <button className="bg-pink-700 text-white px-6 py-3 rounded-lg text-sm font-medium hover:bg-pink-200 transition-colors">
               Click to explore South America
             </button>
             </Link>
