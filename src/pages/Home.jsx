@@ -41,14 +41,31 @@ function Home() {
         <div className="bg-white rounded-xl border border-gray-200 p-6 text-center hover:border-gray-400 transition-colors cursor-pointer">
           <p className="text-3xl mb-2">🌏</p>
           <Link to="/Asia">
-          <button className="bg-green-700 text-white px-8 py-5 rounded-lg text-sm font-medium hover:bg-green-200 transition-colors">
+          <button className="bg-red-700 text-white px-8 py-5 rounded-lg text-sm font-medium hover:bg-red-200 transition-colors">
             Click to explore Asia
           </button>
           </Link>
           <p className="text-sm text-gray-400 mt-1">48 countries</p>
         </div>
-      </div>
-
+        <div className="bg-white rounded-xl border border-gray-200 p-6 text-center hover:border-gray-400 transition-colors cursor-pointer">
+          <p className="text-3xl mb-2">🌏</p>
+          <Link to="/Africa">
+          <button className="bg-green-700 text-white px-8 py-5 rounded-lg text-sm font-medium hover:bg-green-200 transition-colors">
+            Click to explore Africa
+          </button>
+          </Link>
+          <p className="text-sm text-gray-400 mt-1">54 countries</p>
+        </div>
+        <div className="bg-white rounded-xl border border-gray-200 p-6 text-center hover:border-gray-400 transition-colors cursor-pointer">
+            <p className="text-3xl mb-2">🌏</p>
+            <Link to="/SouthAmerica">
+            <button className="bg-pink-700 text-white px-8 py-5 rounded-lg text-sm font-medium hover:bg-pink-200 transition-colors">
+              Click to explore South America
+            </button>
+            </Link>
+            <p className="text-sm text-gray-400 mt-1">12 countries</p>
+        </div>
+    </div>
     </div>
   )
 }
