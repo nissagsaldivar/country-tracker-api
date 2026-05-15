@@ -11,11 +11,11 @@ const inFlight = new Map(
 function cacheJSON(url, ttlMS = DEFAULT_TTL_MS) {
     const currentTime = Date.now()
     const resolved = resolvedCache.get(url)
-    if (resolved && resolved.expiresAt > now ) {
+    if (resolved && resolved.expiresAt > currentTime) {
         return Promise.resolve(resolved.data)
     }
 
-    const pending = inFlight.get(URL)
+    const pending = inFlight.get(url)
     if (pending) return pending
 
     const promise = fetch(url)
@@ -50,8 +50,8 @@ export const getNorthAmericanCountries = () => {
 
 
 export const getSouthAmericanCountries = () => {
-    return getSouthAmericanCountries().then((res) => 
-        res.filter((country) => country.subregion == 'South America'),
+    return getAmericas().then((res) =>
+        res.filter((country) => country.subregion === 'South America'),
     )
 }
 
@@ -61,4 +61,12 @@ export const getAmericas = () => {
 
 export const getAsia = () => {
     return cacheJSON(`${baseURL}/asia`)
+}
+
+export const getAfrica = () => {
+    return cacheJSON(`${baseURL}/africa`)
+}
+
+export const getEurope = () => {
+    return cacheJSON(`${baseURL}/europe`)
 }
