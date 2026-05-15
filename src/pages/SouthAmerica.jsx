@@ -1,14 +1,13 @@
 import { useState, useEffect } from 'react'
+import { getSouthAmericanCountries } from '../api/countries.js'
 
 function SouthAmerica() {
   const [countries, setCountries] = useState([])
 
   useEffect(() => {
-    fetch('https://restcountries.com/v3.1/region/americas')
-      .then(res => res.json())
+      getSouthAmericanCountries()
       .then(data => {
-        const southAmerica = data.filter(country => country.subregion === 'South America')
-        setCountries(southAmerica)
+        setCountries(data)
       })
   }, [])
 

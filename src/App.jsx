@@ -6,7 +6,7 @@ import Africa from './pages/Africa'
 import SouthAmerica from './pages/SouthAmerica'
 import { Route, Routes } from 'react-router-dom'
 
-// and in your routes:
+// add your routes:
 export default function App() {
   return (
     <Routes>

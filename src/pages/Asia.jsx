@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react'
+import { getAsia } from '../api/countries.js'
 
 function Asia() {
   const [countries, setCountries] = useState([])
 
   useEffect(() => {
-    fetch('https://restcountries.com/v3.1/region/asia')
-      .then(res => res.json())
+    getAsia()
       .then((data) => {
         setCountries(data)
       })
